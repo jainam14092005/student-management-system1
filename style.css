@@ -1,0 +1,194 @@
+/* Core Body Layout */
+body {
+    font-family: 'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fc;
+    color: #3a3b45;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #111827; /* Dark charcoal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f8f9fc;
+}
+
+.sidebar a {
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+    background: #1f2937;
+    padding-left: 30px;
+}
+
+.sidebar a.active {
+    color: #ffffff;
+    background: #1f2937;
+    font-weight: 600;
+    border-left: 4px solid #4e73df; /* Royal blue stripe */
+}
+
+/* Main content wrapper */
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* General Card Design */
+.card {
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styling */
+.form-label {
+    color: #4e73df;
+    font-size: 14px;
+}
+
+.form-control, .form-select {
+    border: 1px solid #d1d3e2;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    color: #6e707e;
+    background-color: #fff;
+    border-color: #bac8f3;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.input-group-text {
+    border: 1px solid #d1d3e2;
+    border-radius: 8px 0 0 8px;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653d4;
+}
+
+.btn-success {
+    background-color: #1cc88a;
+    border-color: #1cc88a;
+}
+
+.btn-success:hover {
+    background-color: #17a673;
+    border-color: #169b6b;
+}
+
+.btn-warning {
+    background-color: #f6c23e;
+    border-color: #f6c23e;
+}
+
+.btn-warning:hover {
+    background-color: #dda20a;
+    border-color: #d09809;
+}
+
+/* Custom Table Styling */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #5a5c69;
+    padding: 16px;
+    background-color: #f8f9fc;
+}
+
+.table td {
+    padding: 16px;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fc;
+}
+
+/* Custom badges */
+.badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+/* Responsive sidebar adaptations */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    
+    .sidebar h3, .sidebar a span, .sidebar a .menu-text {
+        display: none;
+    }
+    
+    .sidebar a {
+        justify-content: center;
+        padding: 15px 0;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+        padding: 20px;
+    }
+}

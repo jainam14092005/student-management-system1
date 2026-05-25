@@ -1,0 +1,291 @@
+/* Student Portal Custom Stylesheet */
+
+/* Fonts & Base Styles */
+body {
+    font-family: 'Outfit', 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+    background-attachment: fixed;
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+/* Glassmorphic Cards */
+.glass-card {
+    background: rgba(30, 41, 59, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(147, 51, 234, 0.15);
+    border-color: rgba(147, 51, 234, 0.3);
+}
+
+/* Student Sidebar styling override */
+.student-sidebar {
+    width: 250px;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    z-index: 100;
+}
+
+.student-sidebar h3 {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+.student-sidebar a {
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 4px solid transparent;
+}
+
+.student-sidebar a:hover {
+    color: #f472b6;
+    background: rgba(244, 114, 182, 0.05);
+    padding-left: 30px;
+}
+
+.student-sidebar a.active {
+    color: #ffffff;
+    background: rgba(147, 51, 234, 0.15);
+    font-weight: 600;
+    border-left: 4px solid #c084fc; /* Violet accent stripe */
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+}
+
+/* Page Header and Titles */
+h2.page-title {
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Metrics and Circular Gauges */
+.metric-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-value {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.attendance-gauge {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+}
+
+/* Profiles & Details */
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(167, 139, 250, 0.3);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.25);
+}
+
+.placeholder-avatar-large {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    border: 4px solid rgba(167, 139, 250, 0.3);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.25);
+}
+
+/* Table overrides for student theme */
+.student-table {
+    color: #e2e8f0 !important;
+}
+
+.student-table th {
+    background: rgba(15, 23, 42, 0.4) !important;
+    color: #cbd5e1 !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.student-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 16px !important;
+}
+
+.student-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Student Login Page Layout */
+.student-login-body {
+    background: radial-gradient(circle at 10% 20%, #1e1b4b 0%, #090d16 90%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.login-glass-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    width: 440px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.login-header-glow {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.login-header-glow::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.student-form-control {
+    background: rgba(15, 23, 42, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    height: 48px;
+    transition: all 0.3s ease;
+}
+
+.student-form-control::placeholder {
+    color: #64748b !important;
+}
+
+.student-form-control:focus {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25) !important;
+}
+
+.student-input-group-text {
+    background: rgba(15, 23, 42, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #94a3b8 !important;
+    border-radius: 10px 0 0 10px !important;
+}
+
+.student-btn-login {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.student-btn-login:hover {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+}
+
+.role-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: #c084fc;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(192, 132, 252, 0.2);
+}
+
+/* Custom stats badges */
+.status-badge-present {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-badge-absent {
+    background: rgba(239, 68, 68, 0.15) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+    .student-sidebar {
+        width: 70px;
+    }
+    .student-sidebar h3, .student-sidebar small, .student-sidebar a span, .student-sidebar a .menu-text {
+        display: none;
+    }
+    .student-sidebar a {
+        justify-content: center;
+        padding: 18px 0;
+    }
+    .main-content {
+        margin-left: 70px;
+        padding: 20px;
+    }
+}
